@@ -12,7 +12,8 @@ angular
     .module('ciipApp', [
         'ngAnimate',
         'ngCookies',
-        'ui.router'
+        'ui.router',
+        'anim-in-out'
     ])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/");
@@ -36,6 +37,9 @@ angular
                 url: '/contact',
                 templateUrl: 'views/contact.html',
                 controller: 'ContactCtrl',
-                controllerAs: 'contact'
+                controllerAs: 'contact',
+                onExit:function(){
+                    
+                }
             });
     });
