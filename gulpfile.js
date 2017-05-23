@@ -8,6 +8,7 @@ var lazypipe = require('lazypipe');
 var rimraf = require('rimraf');
 var wiredep = require('wiredep').stream;
 var runSequence = require('run-sequence');
+var sourcemaps = require('gulp-sourcemaps');
 
 var yeoman = {
     app: require('./bower.json').appPath || 'app',
@@ -129,6 +130,7 @@ gulp.task('client:build', ['html', 'styles'], function() {
     var indexHtmlFilter = $.filter(['**/*', '!**/index.html'], { restore: true });
 
     return gulp.src(paths.views.main)
+        .pipe(sourcemaps.init())
         .pipe($.useref({ searchPath: [yeoman.app, '.tmp', 'bower_components'] }))
         .pipe(jsFilter)
         .pipe($.ngAnnotate())
@@ -141,6 +143,7 @@ gulp.task('client:build', ['html', 'styles'], function() {
         .pipe($.rev())
         .pipe(indexHtmlFilter.restore())
         .pipe($.revReplace())
+        .pipe(sourcemaps.write('../maps'))
         .pipe(gulp.dest(yeoman.dist));
 });
 
