@@ -28,7 +28,7 @@ angular.module('ciipApp')
             },
             hide: function() {
                 count--;
-                if (count == 0) {
+                if (count === 0) {
                     el.fadeOut();
                 }
             }

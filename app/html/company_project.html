@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>企业管理--项目总览</title>
+    <!-- build:css(.tmp) ../styles/index.css -->
+    <link rel="stylesheet" href="../styles/common/reset.css">
+    <link rel="stylesheet" href="../styles/common/main.css">
+    <link rel="stylesheet" href="../styles/index/index.css">
+    <link rel="stylesheet" href="../styles/company/project.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="index__container">
+        <div class="wrapper">
+            <div class="header">
+                <div class="center">
+                    <div class="top-left">国资委-央企国际合作信息交互平台</div>
+                    <div class="top-right">
+                        <div class="top-search">
+                            <span class="top-icon"></span>
+                            <input type="text" placeholder="搜索">
+                        </div>
+                        <input class="loginout" type="button" value="退出">
+                    </div>
+                </div>
+                <div class="bottom">
+                    <ul class="nav">
+                        <li class="nav__li active">
+                            <a href="">首页</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="">企业管理</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="">外事服务</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="">通知公告</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="">统计分析</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="">应急管理</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="center" ui-view>
+                <div class="project__box">
+                    <div class="head__nav"> 
+                        <span class="nav__icon"></span>
+                        <a href="">企业管理</a>&gt;
+                        <span>项目总览</span>
+                    </div>
+                    <div class="company__section">
+                        <div class="company__aside">
+                            <ul>
+                                <li class="aside__li active">
+                                    <a href="">项目总览</a>
+                                </li>
+                                <li class="aside__li">
+                                    <a href="">线上信息填报</a>
+                                </li>
+                                <li class="aside__li">
+                                    <a href="">批量处理</a>
+                                </li>
+                                <li class="aside__li">
+                                    <a href="">填报模板下载</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="company__main">
+                            <div>
+                                <select name="" id="">
+                                    <option value="">境外机构</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="">中国航信集团</option>
+                                </select>
+                            </div>
+                            <p>
+                                航信集团描述在这里...
+                            </p>
+                            
+                            <div class="company__twrap">
+                                
+                                <table class="company__table">
+                                    <thead>
+                                        <th>序号</th>
+                                        <th>项目名称</th>
+                                        <th>所属企业</th>
+                                        <th>所在区域</th>
+                                        <th>所属行业</th>
+                                        <th>资金规模</th>
+                                        <th>目前进展</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="company__tr">
+                                            <td>1</td>
+                                            <td>飞机</td>
+                                            <td>航信</td>
+                                            <td>北京</td>
+                                            <td>航空</td>
+                                            <td>10billon</td>
+                                            <td>loading</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="address">
+                <div class="address__link">
+                    <select name="" id="">
+                        <option value="">友情链接</option>
+                    </select>
+                </div>
+                <ul class="address__ul">
+                    <li class="f16 first">
+                        <div class="line"></div>国资委</li>
+                    <li class="f14">西便门办公区地址：北京市宣武门西大街26号 <span class="yb">邮编:100053</span></li>
+                    <li class="f14">安定门办公区地址：北京市安定门外大街56号 <span class="yb">邮编:100011</span></li>
+                    <li class="f14">国务院国资委总机：010-63192000</li>
+                    <li class="f14">支持单位：中国民航信息网络股份有限公司</li>
+                </ul>
+            </div>
+            <div class="bottom">
+                Copyright © 国务院国有资产监督管理委员会2017
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

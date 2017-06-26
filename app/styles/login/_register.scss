@@ -1,0 +1,92 @@
+.register__box {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 6px 6px 6px #5ba5d5;
+    padding-top: 20px;
+    width: 930px;
+    margin: 44px auto;
+    a:link,a:visited {
+        color: #cc0000;
+    }
+    .register__back {
+        color: #cc0000;
+        font-size: 20px;
+        padding-left: 20px;
+        margin-left: 20px;
+        background: url(../../images/b.png) no-repeat 0 2px;
+        line-height: 1;
+        cursor: pointer;
+    }
+    .register__inner {
+        width: 470px;
+        margin: 0 auto;
+    }
+    fieldset {
+        border: none;
+        width: 422px;
+        margin: 0 auto;
+        label {
+            padding-bottom: 8px;
+        }
+        label+label {
+            margin-top: 17px;
+        }
+    }
+    @mixin inputLabel($wd, $fs) {
+        border-bottom: 1px solid #bcbcbc;
+        display: inline-block;
+        width: $wd;
+        font-size: $fs;
+        color: #666;
+    }
+    .register_label {
+        position: relative;
+        @include inputLabel(423px, 18px);
+        .reg_span {
+            display: inline-block;
+            padding: 0 10px 0 16px;
+            border-right: 1px solid #bcbcbc;
+        }
+        .reg_input {
+            border: none;
+            outline: none;
+        }
+        .getCode {
+            position: absolute;
+            right: 0;
+            top: -5px;
+            border: none;
+            background: #ffae01;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 3px;
+            padding: 6px;
+        }
+    }
+    .btn__box {
+        padding-top: 40px;
+        padding-bottom: 43px;
+    }
+    @mixin rbtn($color) {
+        width: 217px;
+        border-radius: 20px;
+        background: $color;
+        color: #fff;
+        font-size: 24px;
+        border: none;
+        padding: 8px 0;
+        box-shadow: 2px 2px 2px #eee;
+        cursor: pointer;
+    }
+    .btn__reg {
+        float: left;
+        @include rbtn(#ffb401);
+    }
+    .btn__reset {
+        float: right;
+        @include rbtn(#666);
+    }
+}

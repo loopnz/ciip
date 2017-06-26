@@ -1,0 +1,27 @@
+<div class="project__box">
+    <div class="head__nav">
+        <span class="nav__icon"></span>
+        <a ui-sref="main.company.project.overview">企业管理</a>&gt;
+        <span>项目总览</span>
+    </div>
+    <div class="company__section">
+        <div class="company__aside">
+            <ul>
+                <li class="aside__li" ng-class="active=='overview'?'active':''">
+                    <a ui-sref="main.company.project.overview">项目总览</a>
+                </li>
+                <li class="aside__li" ng-class="active=='fill'?'active':''">
+                    <a ui-sref="main.company.project.fill">线上信息填报</a>
+                </li>
+                <li class="aside__li">
+                    <a ui-sref="">批量处理</a>
+                </li>
+                <li class="aside__li">
+                    <a ui-sref="">填报模板下载</a>
+                </li>
+            </ul>
+        </div>
+        <div class="company__main fade-in" ui-view>
+        </div>
+    </div>
+</div>

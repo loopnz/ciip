@@ -1,0 +1,188 @@
+/**
+ * company/common
+ * --------------------------------------------------
+ */
+.company__section {
+    padding-top: 40px;
+}
+
+.company__aside {
+    width: 173px;
+    float: left;
+    margin-right: 46px;
+    ul {
+        padding-left: 20px;
+    }
+    .aside__li {
+        a {
+            @extend .button;
+            @include button-style(#77c3f4, none, #fff);
+            width: 153px;
+            border-radius: 5px;
+            &:visited {
+                color: #fff;
+            }
+        }
+    }
+    .aside__li.active a {
+        background: #194984;
+    }
+    .aside__li+.aside__li {
+        margin-top: 10px;
+    }
+}
+
+.company__main {
+    width: 784px;
+    padding-left: 21px;
+    display: inline-block;
+    p{
+        margin:18px 0;
+    }
+}
+
+.company__twrap {
+    overflow-x: auto;
+
+    .btn__box{
+        margin-top:38px;
+        text-align:center;
+        margin-bottom: 106px;
+    }
+
+    .export__btn{
+        @extend .button;
+        width:145px;
+        line-height:1;
+        border-radius:3px;
+        height:32px;
+        font-size:18px;
+    }
+}
+
+.company__table {
+    @include base-table;
+    thead {
+        background: #77c3f4;
+        color: #fff;
+    }
+    th,
+    td {
+        padding: 10px;
+    }
+}
+
+.company__tr {
+    font-size: 16px;
+    color: #194984;
+}
+
+.company__tr td:first-child {
+    color: #666;
+}
+
+.sideLine {
+    position: absolute;
+    background: #bdbebf;
+    width: 4px;
+    height: 153px;
+    top: -18px;
+    right: 0px;
+    z-index: 2;
+}
+
+.form__box {
+    position: relative;
+    fieldset {
+        width: 745px;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    fieldset+fieldset {
+        margin-top: 50px;
+    }
+    legend {
+        text-align: center;
+        width: 100%;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .legend__txt {
+        display:inline-block;
+        background: #77c3f4;
+        color: #fff;
+        width: 153px;
+        font-size: 20px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 3px;
+        box-shadow: 2px 2px 3px #bcbcbc;
+    }
+    .label {
+        display: block;
+        height: 38px;
+        line-height: 38px;
+        font-size: 18px;
+        margin-top: 22px;
+        padding-right:27px;
+        input,
+        textarea {
+            height: 36px;
+            padding: 0;
+            padding-left: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 18px;
+        }
+        textarea {
+            height: 154px;
+            outline: none;
+        }
+        &+.label{
+            margin-top:18px;
+        }
+    }
+    .label__area {
+        @extend .label;
+        height: auto;
+        line-height: 1;
+        font-size: 0;
+    }
+    .label__txt {
+        float: left;
+        width: 170px;
+        margin-right: 11px;
+        font-size: 18px;
+    }
+    .label__ibox {
+        overflow: hidden;
+    }
+    .btn__area {
+        padding: 80px 0 130px 0;
+        text-align: center;
+    }
+    @mixin bottomBtn($color) {
+        width: 311px;
+        border-radius: 3px;
+        border: none;
+        box-shadow: 2px 2px 2px #eee;
+        text-align: center;
+        background: $color;
+        height: 46px;
+        line-height: 46px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #fff;
+    }
+    .btn__sub {
+        @include bottomBtn(#ffb400);
+        float: left;
+    }
+    .btn__reset {
+        @include bottomBtn(#999);
+        float: right;
+    }
+}

@@ -1,0 +1,26 @@
+
+/**
+ * Buttons
+ * --------------------------------------------------
+ */
+
+
+.button{
+    @include button-style($button-default-bg,$button-default-border,$button-default-font-color);
+    @include box-shadow($button-default-shadow);
+	position:relative;
+	display:inline-block;
+    border-radius: $button-border-radius;
+    width:$button-default-width;
+    border-width:$button-border-width;
+    border-style: solid;
+    padding: $button-padding 0;
+    cursor: pointer;
+    outline:none;
+    text-align:center;
+	
+    &.reset {
+        background: $button-reset-bg;
+    }
+}
+

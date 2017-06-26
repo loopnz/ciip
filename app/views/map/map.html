@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: "微软雅黑";
+    }
+    
+    #allmap {
+        width: 100%;
+        height: 100%;
+    }
+    
+    p {
+        margin-left: 5px;
+        font-size: 14px;
+    }
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&ak=kyXbiXAi6ZD46P7TcM3epuTGcHUhyiOh"></script>
+    <script type="text/javascript" src="../../scripts/map/TextIconOverlay.js"></script>
+    <script type="text/javascript" src="../../scripts/map/MarkerClusterer.js"></script>
+    <title>点聚合</title>
+</head>
+
+<body>
+    <div id="allmap"></div>
+    <p>缩放地图，查看点聚合效果</p>
+</body>
+
+</html>
+<script type="text/javascript">
+// 百度地图API功能
+var map = new BMap.Map("allmap");
+map.centerAndZoom(new BMap.Point(-91.706222, 46.372139), 5);
+map.enableScrollWheelZoom();
+
+var MAX = 10000;
+var markers = [];
+var points = [];
+var pt = null;
+var i = 0;
+for (; i < MAX; i++) {
+    pt = new BMap.Point(Math.random() * 40 + 85, Math.random() * 30 + 21);
+    points.push(pt);
+    markers.push(new BMap.Marker(pt));
+}
+
+/*var markerClusterer = new BMapLib.MarkerClusterer(map, {
+    markers: markers,
+    styles: [{
+        url: '../images/company_s.png',
+        size: new BMap.Size(13, 18)
+    }, {
+        url: '../images/company_s.png',
+        size: new BMap.Size(13, 18)
+    }, {
+        url: '../images/company_b.png',
+        size: new BMap.Size(20, 26)
+    }, {
+        url: '../images/company_b.png',
+        size: new BMap.Size(20, 26)
+    }]
+});
+
+map.addEventListener("zoomend", function() {
+    for (var i = 0; i < markerClusterer._clusters.length; i++) {
+
+        var cluster = markerClusterer._clusters[i];
+        cluster._clusterMarker.setText('');
+        if (cluster.isReal) {
+            (function(cluster) {
+                cluster._clusterMarker.addEventListener('mouseover', function() {
+                    console.log(cluster._markers.length);
+                    console.log(cluster._clusterMarker === this);
+                    this.setText('');
+                })
+            })(cluster)
+        } else {
+            (function(cluster) {
+                cluster._clusterMarker.addEventListener('click', function() {
+                    console.log(cluster._markers.length);
+                    console.log(cluster._clusterMarker === this);
+                })
+            })(cluster)
+        }
+
+
+    }
+});*/
+
+
+var myGeo = new BMap.Geocoder();
+    // 将地址解析结果显示在地图上,并调整地图视野
+    myGeo.getPoint("纽约市立大学", function(point){
+        if (point) {
+            map.centerAndZoom(point, 10);
+            map.addOverlay(new BMap.Marker(point));
+        }else{
+            alert("您选择地址没有解析到结果!");
+        }
+    }, "纽约市");
+
+
+// ss(markers);
+
+
+// function ss(markerArr) { //markerArr数据库数据查询的结果  
+//     var markers = [];
+//     var pt = null;
+//     var i = 0;
+//     for (; i < markerArr.length; i++) {
+//         pt = new BMap.Point(markerArr[i].longitude, markerArr[i].latitude);
+//         markers.push(new BMap.Marker(pt));
+//     }
+//     var markerClusterer = new BMapLib.MarkerClusterer(map, {
+//         markers: markers
+//     });
+// }
+
+function sss(points) {
+    var pointCollection = new BMap.PointCollection(points); // 初始化PointCollection
+    map.addOverlay(pointCollection);
+}
+
+//sss(points);
+</script>

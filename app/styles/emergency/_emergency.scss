@@ -1,0 +1,239 @@
+.emergency__box {
+    width: 1024px;
+    margin: 0 auto;
+    @mixin embtn() {
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+        background: #77c3f4;
+        border-radius: 3px;
+        border: none;
+        padding: 9px 15px;
+        line-height: 1;
+        display: inline-block;
+    }
+    .emergency__address {
+        margin-top: 40px;
+        padding-left: 20px;
+        .addstr {
+            @include embtn;
+        }
+    }
+    #emergencyMap {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        height: 412px;
+    }
+    .info {
+        padding-left: 20px;
+        margin-bottom: 100px;
+    }
+    .tableTitle {
+        @include embtn;
+        float: left;
+        margin-right: 50px;
+    }
+    .employee,
+    .project {
+        margin-top: 25px;
+    }
+    .organTable {
+        float: left;
+        font-size: 20px;
+        width: 500px;
+        text-align: center;
+        td {
+            padding: 6px 0;
+            width: 50%;
+        }
+        .organtbody {
+            background: #ffea00;
+            tr+tr {
+                border-top: 1px solid #b4b0b0;
+            }
+        }
+    }
+    .linetd {
+        position: relative;
+        width: 1px!important;
+        div {
+            position: absolute;
+            width: 1px!important;
+            height: 30px;
+            top: 4px;
+            left: 0;
+            background: #b4b0b0;
+        }
+    }
+    .employeeTable,
+    .projectTable {
+        @extend .organTable;
+        thead {
+            background: #ffea00;
+        }
+        td {
+            width: 33%;
+        }
+        tbody td {
+            border-bottom: 1px solid #b4b0b0;
+        }
+    }
+}
+
+.em__main {
+    padding: 35px 0px 100px 0px;
+    .em__name {
+        position: relative;
+        height: 36px;
+        line-height: 36px;
+        font-size: 20px;
+        padding: 0 20px 0 31px;
+    }
+    .em__sline {
+        position: absolute;
+        width: 3px;
+        top: 0;
+        left: 20px;
+        height: 36px;
+        background: #77c3f4;
+    }
+    .em__txt {
+        color: #999;
+    }
+    .em__tname {
+        color: #77c3f4;
+        cursor: pointer;
+    }
+    .em__event {
+        position: relative;
+        margin-top: 26px;
+        padding: 0 9px 0 9px;
+    }
+    .em__leftarrow {
+        position: absolute;
+        width: 26px;
+        height: 41px;
+        background: url(../../images/left.png) no-repeat;
+        top: 50%;
+        left: 0;
+        margin-top: -20px;
+        cursor: pointer;
+    }
+    .em__rightarrow {
+        position: absolute;
+        width: 24px;
+        height: 41px;
+        background: url(../../images/right.png) no-repeat;
+        top: 50%;
+        margin-top: -20px;
+        right: 0;
+        cursor: pointer;
+    }
+    .em__wrap {
+        overflow: hidden;
+        margin: 0 50px;
+    }
+    .em__ul {
+        font-size: 0;
+    }
+    .em__li {
+        display: inline-block;
+        font-size: 18px;
+        max-width: 400px;
+        vertical-align: top;
+    }
+    .em__v {
+        height: 46px;
+        margin-bottom: 18px;
+        padding-left: 13px;
+    }
+    .em__vimg {
+        width: 62px;
+        height: 46px;
+        overflow: hidden;
+        display: inline-block;
+    }
+    .em__vimg+.em__vimg {
+        margin-left: 30px;
+    }
+    .em__edate {
+        color: #ffae01;
+        padding-left: 13px;
+        border-left: 1px solid #ffae01;
+        line-height: 18px;
+        font-size: 18px;
+        margin-top: 19px;
+    }
+    .em__detail {
+        padding: 0 13px;
+        color: #77c3f4;
+        line-height: 1;
+        margin-top: 12px;
+    }
+    .em__line {
+        position: relative;
+    }
+    .em__circle {
+        position: absolute;
+        left: 13px;
+        top: -7px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #77c3f4;
+    }
+    .em__inline {
+        height: 2px;
+        background: #77c3f4;
+    }
+    .em__listTitle {
+        position: relative;
+        height: 36px;
+        line-height: 36px;
+        font-size: 20px;
+        padding: 0 20px 0 31px;
+        color: #77c3f4;
+        margin-top: 50px;
+    }
+    .em__eventList {
+        padding: 45px 78px 0px 61px;
+    }
+    .em__eventItem {
+        position: relative;
+        font-size: 18px;
+        color: #666;
+        padding-bottom: 57px;
+    }
+    .em__emd {
+        margin-right: 15px;
+        width: 61px;
+    }
+    .em__eventLine {
+        display: inline-block;
+        width: 16px;
+        margin-right: 15px;
+        height: 16px;
+        text-align: center;
+    }
+    .em__eventcircle {
+        position: absolute;
+        top: 3px;
+        left: 76px;
+        width: 16px;
+        height: 16px;
+        background: #77c3f4;
+        border-radius: 50%;
+    }
+    .em__eventinline {
+        position: absolute;
+        top: 3px;
+        left: 83px;
+        width: 2px;
+        height: 100%;
+        z-index: 2;
+        background: #77c3f4;
+    }
+    .em__eventTxt {
+        line-height: 24px;
+    }
+}

@@ -1,0 +1,108 @@
+.findPwd__box {
+    position: relative;
+    margin: 0 auto;
+    width: 930px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 44px 0;
+    a:link,
+    a:visited {
+        color: #cc0000;
+    }
+}
+
+.findPwd__wrap {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 6px 6px 6px #5ba5d5;
+    padding-top: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    .findPwd__back {
+        color: #cc0000;
+        font-size: 20px;
+        padding-left: 20px;
+        margin-left: 20px;
+        background: url(../../images/b.png) no-repeat 0 2px;
+        line-height: 1;
+        cursor: pointer;
+    }
+    .findPwd__m1 {
+        padding: 60px 0 0 45px;
+    }
+    .findPwd__m2 {
+        padding: 60px 0 0 45px;
+    }
+    .findPwd__str {
+        padding: 14px;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        background: #7bc6f6;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    .findPwd__field {
+        width: 440px;
+        margin: 30px auto 0;
+        border: none;
+        label {
+            padding-bottom: 8px;
+        }
+        label+label {
+            margin-top: 17px;
+        }
+    }
+    @mixin inputLabel($wd, $fs) {
+        border-bottom: 1px solid #bcbcbc;
+        display: inline-block;
+        width: $wd;
+        font-size: $fs;
+        color: #666;
+    }
+    .findPwd_label {
+        position: relative;
+        @include inputLabel(423px, 18px);
+        .reg_span {
+            display: inline-block;
+            padding: 0 10px 0 16px;
+            border-right: 1px solid #bcbcbc;
+        }
+        .reg_input {
+            border: none;
+            outline: none;
+        }
+        .getCode {
+            position: absolute;
+            right: 0;
+            top: -5px;
+            border: none;
+            background: #ffae01;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 3px;
+            padding: 6px;
+        }
+    }
+    .findPwd__btnBox {
+        padding-top: 100px;
+        text-align: center;
+    }
+    @mixin rbtn($color) {
+        width: 217px;
+        border-radius: 20px;
+        background: $color;
+        color: #fff;
+        font-size: 24px;
+        border: none;
+        padding: 8px 0;
+        box-shadow: 2px 2px 2px #eee;
+        cursor: pointer;
+    }
+    .btn__reg {
+        @include rbtn(#ffb401);
+    }
+}

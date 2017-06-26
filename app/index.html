@@ -1,81 +1,79 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.tmp) styles/vendor.css -->
+    <!-- build:css(./app/) styles/select.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="styles/anim-in-out.css">
+    <link rel="stylesheet" href="styles/plugin/select.css">
+    <link rel="stylesheet" href="styles/plugin/selectize.css">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/ciip.css">
+    <link rel="stylesheet" href="styles/common/main.css">
     <!-- endbuild -->
-  </head>
-  <body ng-app="ciipApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.2.0/es5-shim.js"></script>
+      <script>
+        document.createElement('ui-select');
+        document.createElement('ui-select-match');
+        document.createElement('ui-select-choices');
+      </script>
     <![endif]-->
+  <!--   <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&ak=kyXbiXAi6ZD46P7TcM3epuTGcHUhyiOh"></script> -->
+</head>
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <a class="navbar-brand" href="#/">ciip</a>
-          </div>
-
-          <div class="collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a ui-sref="main">Home</a></li>
-              <li><a ui-sref="about">About</a></li>
-              <li><a ui-sref="contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-    <div class="anim-in-out anim-fade" data-anim-speed="300" ui-view=""></div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
-
-
-
+<body ng-app="ciipApp">
+    <div class="fade-in container" ui-view></div>
     <!-- build:js(bower_components) scripts/vendor.js -->
     <!-- bower:js -->
-      <script type="text/javascript" src="jquery/dist/jquery.js"></script>
-      <script type="text/javascript" src="angular/angular.js"></script>
-      <script type="text/javascript" src="angular-animate/angular-animate.js"></script>
-      <script type="text/javascript" src="angular-cookies/angular-cookies.js"></script>
-      <script type="text/javascript" src="angular-ui-router/release/angular-ui-router.js"></script>
-      <script type="text/javascript" src="angular-ui-router-anim-in-out/anim-in-out.js"></script>
+    <script type="text/javascript" src="jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="angular/angular.js"></script>
+    <script type="text/javascript" src="angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript" src="angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="angular-ui-select/dist/select.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/contact.js"></script>
-        <script src="scripts/services/$pcmodal.js"></script>
-        <script src="scripts/directives/pcmodal.js"></script>
-        <script src="scripts/services/$loadtemplate.js"></script>
-        <script src="scripts/services/$pcpopup.js"></script>
-        <script src="scripts/services/$backdrop.js"></script>
-        <script src="scripts/services/report.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/index/main.js"></script>
+    <script src="scripts/services/$pcmodal.js"></script>
+    <script src="scripts/directives/pcmodal.js"></script>
+    <script src="scripts/services/$loadtemplate.js"></script>
+    <script src="scripts/services/$pcpopup.js"></script>
+    <script src="scripts/services/$backdrop.js"></script>
+    <script src="scripts/controllers/login/login.js"></script>
+    <script src="scripts/controllers/index/index.js"></script>
+    <script src="scripts/controllers/emergency/emergency.js"></script>
+    <script src="scripts/controllers/company/company.js"></script>
+    <script src="scripts/controllers/login/loginindex.js"></script>
+    <script src="scripts/controllers/login/register.js"></script>
+    <script src="scripts/controllers/company/project/project.js"></script>
+    <script src="scripts/controllers/company/project/projectoverview.js"></script>
+    <script src="scripts/controllers/company/project/projectfill.js"></script>
+    <script src="scripts/controllers/company/organ/organ.js"></script>
+    <script src="scripts/controllers/company/organ/overview.js"></script>
+    <script src="scripts/controllers/company/organ/fill.js"></script>
+    <script src="scripts/controllers/company/employ/employ.js"></script>
+    <script src="scripts/controllers/company/employ/fill.js"></script>
+    <script src="scripts/controllers/company/employ/overview.js"></script>
+    <script src="scripts/directives/dropdownmenu.js"></script>
+    <script src="scripts/controllers/company/oversea/overview.js"></script>
+    <script src="scripts/controllers/emergency/emergency/index.js"></script>
+    <script src="scripts/controllers/emergency/safewarn/index.js"></script>
+    <script src="scripts/controllers/emergency/command/index.js"></script>
+    <script src="scripts/controllers/emergency/emergency/detail.js"></script>
+    <script src="scripts/controllers/service/local.js"></script>
+    <script src="scripts/controllers/service/localdetail.js"></script>
+    <script src="scripts/directives/tabmenu.js"></script>
+    <script src="scripts/controllers/service/business.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>

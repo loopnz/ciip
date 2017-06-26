@@ -1,0 +1,34 @@
+<div class="index__box">
+    <div class="notice">
+        <div class="icon"></div>
+        通知在这了
+    </div>
+    <div class="mapArea">
+        <div>
+<div class="index__select" ui-select ng-model="country.selected" theme="selectize"  title="Choose a country">
+        <ui-select-match placeholder="近一年">{{$select.selected.name}}</ui-select-match>
+        <ui-select-choices repeat="country in countries">
+          <span ng-bind-html="country.name"></span>
+        </ui-select-choices>
+      </div >
+            <label class="checkbox">
+                <input type="checkbox" name="con" value="1"><span>突发事件</span>
+                <div class="checkbox_bg"></div>
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" name="con" value="1"><span>机构</span>
+                <div class="checkbox_bg"></div>
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" name="con" value="1"><span>项目</span>
+                <div class="checkbox_bg"></div>
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" name="con" value="1"><span>人员</span>
+                <div class="checkbox_bg"></div>
+            </label>
+            <button class="select__btn">筛选</button>
+        </div>
+        <div id="map"></div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+<div class="index__container">
+    <div class="wrapper">
+        <div class="header">
+            <div class="center">
+                <div class="top-left">国资委-央企国际合作信息交互平台</div>
+                <div class="top-right">
+                    <div class="top-search">
+                        <span class="top-icon"></span>
+                        <input type="text" placeholder="搜索">
+                    </div>
+                    <input ui-sref="login.login" class="loginout" type="button" value="退出">
+                </div>
+            </div>
+            <div class="bottom">
+                <ul class="nav" msg="{{::msg}}">
+                    <li class="nav__li" ng-class="$root.active=='index'?'active':''">
+                        <a ui-sref="main.index">首页</a>
+                    </li>
+                    <li dropdownmenu class="nav__li" ng-class="$root.active=='company'?'active':''">
+                        <span class="navspan">企业管理</span>
+                        <ul class="dropdownmenu">
+                            <li><a ui-sref="main.company.organ.overview">机构信息</a></li>
+                            <li><a ui-sref="main.company.project.overview">项目信息</a></li>
+                            <li><a ui-sref="main.company.employ.overview">人员信息</a></li>
+                            <li><a ui-sref="main.company.oversea">海外动态</a></li>
+                        </ul>
+                    </li>
+                    <li dropdownmenu class="nav__li" ng-class="$root.active=='forign'?'active':''">
+                        <span class="navspan">外事服务</span>
+                        <ul class="dropdownmenu">
+                            <li><a>使馆信息</a></li>  
+                            <li><a ui-sref="main.service.business">商情驿站</a></li>
+                            <li><a ui-sref="main.service.local({continent:0})">当地信息</a></li>
+                            <li><a>办事指南</a></li>
+                            <li><a>资料下载</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__li" ng-class="$root.active=='notice'?'active':''">
+                        <a href="">通知公告</a>
+                    </li>
+                    <li dropdownmenu class="nav__li" ng-class="$root.active=='count'?'active':''">
+                        <span class="navspan">统计分析</span>
+                        <ul class="dropdownmenu">
+                            <li><a>机构分布</a></li>
+                            <li><a>人员分布</a></li>
+                            <li><a>热点经济</a></li>
+                        </ul>
+                    </li>
+                    <li dropdownmenu class="nav__li" ng-class="$root.active=='emergency'?'active':''">
+                        <span class="navspan">应急管理</span>
+                        <ul class="dropdownmenu">
+                            <li><a ui-sref="main.emergency.safewarn">安全提醒</a></li>
+                            <li><a ui-sref="main.emergency.emergency">应急事件</a></li>
+                            <li><a ui-sref="main.emergency.command">指挥中心</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="center fade-in" ui-view></div>
+    </div>
+    <div class="footer">
+        <div class="address">
+            <div class="address__link">
+                <div class="link_select" ui-select ng-model="country.selected" theme="selectize" title="Choose a country">
+                    <ui-select-match placeholder="友情链接">{{$select.selected.name}}</ui-select-match>
+                    <ui-select-choices repeat="country in countries">
+                        <span ng-bind-html="country.name"></span>
+                    </ui-select-choices>
+                </div>
+            </div>
+            <ul class="address__ul">
+                <li class="f16 first">
+                    <div class="line"></div>国资委</li>
+                <li class="f14">西便门办公区地址：北京市宣武门西大街26号 <span class="yb">邮编:100053</span></li>
+                <li class="f14">安定门办公区地址：北京市安定门外大街56号 <span class="yb">邮编:100011</span></li>
+                <li class="f14">国务院国资委总机：010-63192000</li>
+                <li class="f14">支持单位：中国民航信息网络股份有限公司</li>
+            </ul>
+        </div>
+        <div class="bottom">
+            Copyright © 国务院国有资产监督管理委员会2017
+        </div>
+    </div>
+</div>

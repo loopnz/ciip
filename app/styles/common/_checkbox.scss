@@ -1,0 +1,28 @@
+.checkbox {
+    position: relative;
+    display: inline-block;
+    line-height: 16px;
+    >input {
+        position: absolute;
+        display: none;
+        ~span {
+            vertical-align: top;
+            display: inline-block;
+        }
+        ~.checkbox_bg {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 1px solid black;
+            vertical-align: top;
+        }
+        &:checked {
+            ~.checkbox_bg {
+                background: url(../../images/checkbox.png) no-repeat;
+                border: none;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

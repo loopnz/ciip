@@ -1,0 +1,142 @@
+
+.company__box {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.form__box {
+    .organ__label {
+        margin-top: 0;
+    }
+    .organ__labelArea {
+        height: auto;
+    }
+}
+
+.organ__searchbox{
+	font-size:18px;
+	height:33px;
+}
+
+.search__label {
+    position: relative;
+    display: inline-block;
+    width: 352px;
+    border: 1px solid #999;
+    height: 31px;
+    border-radius:3px;
+    overflow:hidden;
+    .icon {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        top: 8px;
+        left: 14px;
+        vertical-align: middle;
+        cursor: pointer;
+        background: url(../../images/s.png) no-repeat;
+    }
+    input{
+    	border:none;
+    	padding:0 0 0 40px;
+    	line-height:31px;
+    	width:312px;
+    }
+}
+
+.search__organbtn{
+
+	@extend .button;
+	width:101px;
+	border-radius:3px;
+	height:32px;
+	line-height:32px;
+	padding:0;
+	font-size:18px;
+	    vertical-align: top;
+	    margin-left:10px;
+}
+.advance__search{
+	vertical-align: top;
+	margin-left:10px;
+	display:inline-block;
+	line-height:32px;
+	cursor: pointer;
+}
+
+.organ__box{
+	width:100%;
+	border-radius:5px;
+	background:#e9f6ff;
+	margin-bottom:40px;
+	box-shadow:2px 2px 2px #d6d6d6;
+	.continent{
+		width:112px;
+		
+		.gicon{
+			position: absolute;
+			width:20px;
+			height:20px;
+			top:8px;
+			left:8px;
+			background:url(../../images/g.png) no-repeat;
+		}
+		li{
+			text-align:center;
+			position:relative;
+			background:#77c3f4;
+			font-size:20px;
+			color:#fff;
+			border-radius:3px;
+			line-height:1;
+			padding:8px 0;
+			cursor: default;
+			&.active{
+				background:#ffae01;
+			}
+			&+li{
+				margin-top:1px;
+			}
+		}
+	}
+
+	.country__wrap,.comp__wrap ,.institu__wrap{
+		height:258px;
+		overflow:auto;
+
+		.organ__title{
+			color:#194984;
+			font-size:16px;
+			text-align:center;
+			line-height:36px;
+		}
+
+	}
+	.country__wrap{
+		width:179px;
+	}
+	.comp__wrap{
+		width:232px;
+	}
+	.institu__wrap{
+		width:257px;
+	}
+	
+	.wrap__border{
+		border-right:1px solid #d5eefe;
+	}
+	.wrap__ul{
+		margin-top:1px;
+		height:221px;
+		overflow:auto;
+		li{
+			color:#333;
+			line-height:30px;
+			padding-left:20px;
+			cursor: default;
+			+.li{
+				margin-top:1px;
+			}
+		}
+	}
+}

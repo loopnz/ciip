@@ -1,0 +1,243 @@
+@mixin businessbtn($width, $bg) {
+    width: $width;
+    height: 37px;
+    line-height: 37px;
+    font-size: 16px;
+    color: #fff;
+    background: $bg;
+    border: none;
+    cursor: pointer;
+}
+
+.w-358 {
+    width: 358px;
+}
+
+.business__box {
+    position: relative;
+    width: 1024px;
+    margin: 0 auto;
+    .lib {
+        width: 589px;
+        float: left;
+        margin-right: 28px;
+        font-size: 16px;
+        .lib__main {
+            margin-top: 20px;
+            font-size: 0;
+            form>div+div {
+                margin-top: 10px;
+            }
+        }
+        @mixin lib__span($width) {
+            width: $width;
+            display: inline-block;
+            text-align: right;
+            margin-right: 12px;
+            font-size: 16px;
+        }
+        @mixin lib__select($width) {
+            width: $width;
+        }
+        .lib__span {
+            @include lib__span(99px);
+        }
+        .lib__span2 {
+            @include lib__span(64px);
+            margin-right: 9px;
+        }
+        .lib__span3 {
+            @include lib__span(28px);
+            text-align: center;
+            margin: 0;
+        }
+        .lib__input1 {
+            @include input(393px);
+        }
+        .lib__input2 {
+            @include input(240px);
+        }
+        .lib__input3 {
+            @include input(64px);
+        }
+        .lib__input4 {
+            @include input(131px);
+        }
+        .lib__input5 {
+            @include input(471px);
+        }
+        .lib__select1 {
+            @include lib__select(138px);
+        }
+        .lib__select2 {
+            @include lib__select(246px);
+        }
+        .lib__select3 {
+            @include lib__select(246px);
+        }
+        .lib__sbtn1 {
+            @include businessbtn(68px, #194984);
+            margin-left: 10px;
+        }
+        .lib__sbtn2 {
+            @include businessbtn(155px, #194984);
+            margin-right: 20px;
+        }
+        .lib__sbtn3 {
+            @include businessbtn(155px, #77c3f4);
+        }
+        .lib__div {
+            width: 247px;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .lib__dbtxt {
+            font-size: 14px;
+            padding-left: 111px;
+            color: #999;
+            line-height: 1;
+            margin-top: 5px;
+        }
+        .lib__btnbox {
+            text-align: center;
+            margin-top: 24px!important;
+        }
+    }
+    .share {
+        position: relative;
+        overflow: hidden;
+        .share__more {
+            position: absolute;
+            color: #999;
+            right: 0;
+            bottom: 11px;
+            font-size: 14px;
+            line-height: 1;
+        }
+        .share__main {
+            margin-top: 20px;
+        }
+        .share__ul {
+            background: #cbe6f7;
+            font-size: 0;
+        }
+        .share__tabli {
+            display: inline-block;
+            width: 25%;
+            text-align: center;
+            box-sizing: border-box;
+            font-size: 18px;
+            height: 36px;
+            line-height: 36px;
+            cursor: pointer;
+            &.active {
+                border-bottom: 2px solid #77c3f4;
+            }
+        }
+        .share__bodyli {
+            display: none;
+            height: 55px;
+            line-height: 55px;
+        }
+        .share__time {
+            width: 98px;
+            float: right;
+            color: #999;
+            margin-left: 5px;
+        }
+        .share__title {
+            display: block;
+            color: #333;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size:14px;
+            padding-left:10px;
+            &:hover {
+                color: #194984;
+                text-decoration: underline;
+            }
+            &.active {
+                color: #194984;
+                text-decoration: underline;
+            }
+        }
+    }
+    .env {
+        padding: 50px 20px 0 20px;
+    }
+    .env__main {
+        margin-top: 20px;
+    }
+    .env__li {
+        float: left;
+        width: percentage(1/6);
+        color: #fff;
+        text-align: center;
+        background: #77c3f4;
+        font-size: 20px;
+        height: 36px;
+        line-height: 36px;
+        cursor: pointer;
+        &.active {
+            background: #194984;
+        }
+        &:hover {
+            background: #194984;
+        }
+    }
+    .env__country {
+        text-align: justify;
+    }
+    .env__countryitem {
+        margin-top: 20px;
+        width: 240px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        &:hover {
+            color: #194984;
+            text-decoration: underline;
+        }
+        a {
+            color: #333;
+        }
+    }
+    .left_fix {
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+.business__top {
+    padding: 40px 20px 0 20px;
+}
+
+.business__main {
+    margin-bottom: 168px;
+}
+
+.data__download {
+    margin-top: 55px;
+    padding-left:20px;
+}
+
+.download__main {
+    padding: 20px;
+}
+
+.download__link {
+    display: inline-block;
+    font-size: 16px;
+    &:hover a{
+        color: #194984;
+        text-decoration: underline;
+    }
+    a {
+        color: #333;
+    }
+}
+.download__link+.download__link{
+	margin-left:50px;
+}

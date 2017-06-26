@@ -1,0 +1,22 @@
+.dropdownmenu{
+    position: absolute;
+    width:100%;
+    top:42px;
+    left:0;
+    z-index:2;
+    display:none;
+    background:#fff;
+    cursor: pointer; 
+    box-sizing:border-box;
+}
+.dropdownmenu a{
+    cursor: pointer;
+} 
+.dropdownmenu a:hover{
+    background:#194984;
+    color:#fff!important;
+}
+.dropdownmenu li.menuactive a{
+      background:#194984;
+    color:#fff!important;
+}

@@ -1,0 +1,34 @@
+@mixin button-style($bg-color, $border-color, $color) {
+    border-color: $border-color;
+    background-color: $bg-color;
+    color: $color;
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin user-select($select) {
+    -webkit-user-select: $select;
+    -moz-user-select: $select;
+    -ms-user-select: $select;
+    user-select: $select;
+}
+
+@mixin base-table {
+    min-width: 100%;
+    table-layout: fixed;
+    white-space: nowrap;
+    text-align: center;
+}
+
+@mixin input($width, $height:35px,$fz:16px,$bordercolor:#999, $radius:5px) {
+    font-size:$fz;
+    width: $width;
+    border: 1px solid $bordercolor;
+    border-radius: $radius;
+    height: $height;
+    line-height:$height;
+    padding-left: 5px;
+}

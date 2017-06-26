@@ -19,6 +19,7 @@ var paths = {
     scripts: [yeoman.app + '/scripts/**/*.js'],
     styles: [yeoman.app + '/styles/**/*.scss'],
     views: {
+        html:yeoman.app+'/html/*.html',
         main: yeoman.app + '/index.html',
         files: [yeoman.app + '/views/**/*.html']
     }
@@ -50,7 +51,9 @@ gulp.task('styles', function() {
 });
 
 gulp.task('lint:scripts', function() {
+     var jsFilter = $.filter(['**/*.js','!map/*.js']);
     return gulp.src(paths.scripts)
+        .pipe(jsFilter)
         .pipe(lintScripts());
 });
 
@@ -76,7 +79,6 @@ gulp.task('watch', function() {
         .pipe($.plumber())
         .pipe(styles())
         .pipe($.connect.reload());
-
     $.watch(paths.views.main)
         .pipe($.plumber())
         .pipe($.connect.reload());
@@ -134,10 +136,10 @@ gulp.task('client:build', ['html', 'styles'], function() {
         .pipe($.useref({ searchPath: [yeoman.app, '.tmp', 'bower_components'] }))
         .pipe(jsFilter)
         .pipe($.ngAnnotate())
-        .pipe($.uglify())
+        //.pipe($.uglify())
         .pipe(jsFilter.restore())
         .pipe(cssFilter)
-        .pipe($.minifyCss({ cache: true }))
+       // .pipe($.minifyCss({ cache: true }))
         .pipe(cssFilter.restore())
         .pipe(indexHtmlFilter)
         .pipe($.rev())
@@ -145,6 +147,27 @@ gulp.task('client:build', ['html', 'styles'], function() {
         .pipe($.revReplace())
         .pipe(sourcemaps.write('../maps'))
         .pipe(gulp.dest(yeoman.dist));
+});
+
+
+
+gulp.task('serve:static', function(cb) {
+    runSequence('clean:tmp', ['lint:scripts'], ['start:client'],
+        'watchStatic', cb);
+});
+gulp.task('watchStatic', function() {
+    $.watch(paths.styles)
+        .pipe($.plumber())
+        .pipe(styles())
+        .pipe($.connect.reload());
+
+    $.watch(paths.views.html)
+        .pipe($.plumber())
+        .pipe($.connect.reload());
+
+        $.watch(paths.views.files)
+        .pipe($.plumber())
+        .pipe($.connect.reload());
 });
 
 gulp.task('html', function() {

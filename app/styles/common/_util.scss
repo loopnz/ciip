@@ -1,0 +1,64 @@
+
+$font:0px;
+@for $i from 12 through 30{
+	@if($i%2==0){
+		.f#{$i}{
+			font-size:$font+$i;
+		}
+	}
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '';
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+.ovh{
+    overflow: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.tc{
+    text-align:center;
+}
+
+.ml5{
+    margin-left:5px;
+}
+.mt15{
+    margin-top:15px;
+}
+.mb15{
+    margin-bottom:15px;
+}
+
+.ml20{
+    margin-left:20px;
+}
+.mr20{
+    margin-right:20px;
+}
+
+.dn{
+    display:none;
+}
+.dib{
+    display:inline-block;
+}
+
+.db{
+    display:block;
+}

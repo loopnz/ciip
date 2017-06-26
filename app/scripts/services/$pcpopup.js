@@ -60,7 +60,7 @@ angular.module('ciipApp')
 
 
             popup.show = function() {
-                var el=popup.el[0].querySelector('.popup');
+                var el = popup.el[0].querySelector('.popup');
                 rejustPosition(angular.element(el));
                 $backdrop.show();
                 popup.el.fadeIn();

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!-- build:css(.tmp) ../styles/index.css -->
+       <link rel="stylesheet" href="../styles/common/reset.css">
+    <link rel="stylesheet" href="../styles/common/main.css">
+    <link rel="stylesheet" href="../styles/index/index.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="index__container">
+        <div class="wrapper">
+            <div class="header">
+                <div class="center">
+                    <div class="top-left">国资委-央企国际合作信息交互平台</div>
+                    <div class="top-right">
+                        <div class="top-search">
+                            <span class="top-icon"></span>
+                            <input type="text" placeholder="搜索">
+                        </div>
+                        <input class="loginout" type="button" value="退出">
+                    </div>
+                </div>
+                <div class="bottom">
+                    <ul class="nav">
+                        <li class="nav__li active">
+                            <a href="">首页</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="">企业管理</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="">外事服务</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="">通知公告</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="">统计分析</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="">应急管理</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="center" ui-view>
+                <div class="index__box">
+                    <div class="notice">
+                        <div class="icon"></div>
+                        通知在这了
+                    </div>
+                    <div class="mapArea">
+                        <div>  <select name="" id="">
+                            <option value="">近一年</option>
+                        </select>
+                        <label class="checkbox">
+                            <input type="checkbox" name="con" value="1"><span>突发事件</span>
+                            <div class="checkbox_bg"></div>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="con" value="1"><span>机构</span>
+                            <div class="checkbox_bg"></div>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="con" value="1"><span>项目</span>
+                            <div class="checkbox_bg"></div>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="con" value="1"><span>人员</span>
+                            <div class="checkbox_bg"></div>
+                        </label>
+                        <button class="select__btn">筛选</button></div>
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="address">
+                <div class="address__link">
+                    <select name="" id="">
+                        <option value="">友情链接</option>
+                   </select>
+                </div>
+                <ul class="address__ul">
+                    <li class="f16 first">
+                        <div class="line"></div>国资委</li>
+                    <li class="f14">西便门办公区地址：北京市宣武门西大街26号 <span class="yb">邮编:100053</span></li>
+                    <li class="f14">安定门办公区地址：北京市安定门外大街56号 <span class="yb">邮编:100011</span></li>
+                    <li class="f14">国务院国资委总机：010-63192000</li>
+                    <li class="f14">支持单位：中国民航信息网络股份有限公司</li>
+                </ul>
+            </div>
+            <div class="bottom">
+                Copyright © 国务院国有资产监督管理委员会2017
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
